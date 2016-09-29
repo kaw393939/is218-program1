@@ -10,4 +10,30 @@
   echo '<br>';
   echo "$myvar";
 
+  //this is an example of php arrays
+
+  $myarray = array();
+  $myarray[] = 'some value 1';
+  $myarray[] = 'some value 2';
+  $myarray[] = 'some value 3';
+
+  print_r($myarray);
+  //this is an example of an associative array and a nested array
+  $myAssoc = array('value1' => $myarray, 'value2' => $myarray);
+
+  print_r($myAssoc);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ?>
