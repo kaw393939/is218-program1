@@ -9,7 +9,13 @@
   echo '$myvar';
   echo '<br>';
   echo "$myvar";
-
+  echo '<br>';
+  //this is how you concatenate characters in PHP
+  $url = 'http://www.google.com';
+  $linkName = 'Google';
+  echo '<a href="' . $url . '">' . $linkName . '</a>';
+  //when you do this, god kills kittens
+  echo "<a href=\"$url\">$linkName</a>";
   //this is an example of php arrays
 
   $myarray = array();
@@ -18,13 +24,30 @@
   $myarray[] = 'some value 2';
   $myarray[] = 'some value 3';
 
-  print_r($myarray);
+  //print_r($myarray);
   //this is an example of an associative array and a nested array
-  $myAssoc = array('value1' => $myarray, 'value2' => $myarray);
-
-  print_r($myAssoc);
+  $myAssoc['value1'] = array ('LinkName' => 'NJIT', 'URL' => 'www.njit.edu');
+  $myAssoc['value2'] = array ('LinkName'=> 'Facebook', 'URL' => 'www.facebook.com');
+  $myAssoc['value3'] = array('LinkName' => 'Google', 'URL' => 'www.google.com');
+  //print_r($myAssoc);
   // this is how you print_r / access a array by naming the key you want to access
-  print_r($myAssoc['value1']);
+  print_r($myAssoc);
+
+  foreach($myAssoc as $link ) {
+
+ //    print_r($link);
+
+    echo '<a href="http://' . $link['URL'] . '">' . $link['LinkName'] . '</a> <br>';
+  }
+
+
+
+
+
+
+
+
+
   
 
   //This is how you define a class in php 
