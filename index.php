@@ -30,17 +30,26 @@
   $myAssoc['value1'] = array ('LinkName' => 'NJIT', 'URL' => 'www.njit.edu');
   $myAssoc['value2'] = array ('LinkName'=> 'Facebook', 'URL' => 'www.facebook.com');
   $myAssoc['value3'] = array('LinkName' => 'Google', 'URL' => 'www.google.com');
-  //print_r($myAssoc);
+  print_r($myAssoc);
   // this is how you print_r / access a array by naming the key you want to access
   //print_r($myAssoc);
-/*
+
   foreach($myAssoc as $link ) {
 
  //    print_r($link);
 
     echo '<a href="http://' . $link['URL'] . '">' . $link['LinkName'] . '</a> <br>';
   }
-*/
+
+  foreach($myAssoc as $link) {
+    foreach($link as $key => $value) {
+      echo $key . ' ' . $value . "\n";
+
+    }
+  }
+
+
+
   //This is how you define a class in php 
   class myclass {
     public $myPublic;
