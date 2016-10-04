@@ -80,6 +80,7 @@
   $obj->sayHello('Theresa');
   $obj->myPublic = 'swamp gas';
   print_r($obj);
+  echo 'done';
 
 
 
