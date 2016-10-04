@@ -1,5 +1,6 @@
 <?php
-  //This is how you print text in php  
+ //look above is how you start a php progam and at the end you have to close your php tag
+//This is how you print text in php  
   echo 'hello world';
   //This is how you store a value in a variable 
   $myvar = 'Some Text I want to store in a variable';
