@@ -31,25 +31,15 @@
   $myAssoc['value3'] = array('LinkName' => 'Google', 'URL' => 'www.google.com');
   //print_r($myAssoc);
   // this is how you print_r / access a array by naming the key you want to access
-  print_r($myAssoc);
-
+  //print_r($myAssoc);
+/*
   foreach($myAssoc as $link ) {
 
  //    print_r($link);
 
     echo '<a href="http://' . $link['URL'] . '">' . $link['LinkName'] . '</a> <br>';
   }
-
-
-
-
-
-
-
-
-
-  
-
+*/
   //This is how you define a class in php 
   class myclass {
     public $myPublic;
@@ -64,17 +54,31 @@
       $this->myProtected = 3;
     //this is how you call a method inside an object and pass a value;
       $this->sayHello('Keith');
+      $this->noPass();
+      $this->sayHello();
     }
+    public function noPass() {} 
     public function sayHello($name) {
    
-      echo 'Hello ' . $name . "<br>";   
+      echo 'Hello ' . $name . '<br>';   
+    }
+    public function sayGoodBye($name) {
+
+      echo 'Goodbye ' . $name . '<br';
+    }
+
+    public function __destruct() {
+
+      $this->sayGoodBye('Keith');
+
     }
 
 
   }
   //This is how you instantiate a new class object
   $obj = new myclass;
-
+  $obj->sayHello('Theresa');
+  $obj->myPublic = 'swamp gas';
   print_r($obj);
 
 
